@@ -127,6 +127,7 @@ panda_arm:
   hybridize: false
   enforce_constrained_state_space: true
   projection_evaluator: joints(panda_joint1,panda_joint2)
+  optimization_objective: PathLengthOptimizationObjective
   planner_configs:
     - SBLkConfigDefault
     - ESTkConfigDefault
