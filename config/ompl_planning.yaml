@@ -1,4 +1,8 @@
 planner_configs:
+  AnytimePathShortening:
+    type: geometric::AnytimePathShortening
+    shortcut: true
+    hybridize: true
   SBLkConfigDefault:
     type: geometric::SBL
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
@@ -129,6 +133,7 @@ panda_arm:
   projection_evaluator: joints(panda_joint1,panda_joint2)
   optimization_objective: PathLengthOptimizationObjective
   planner_configs:
+    - AnytimePathShortening
     - SBLkConfigDefault
     - ESTkConfigDefault
     - LBKPIECEkConfigDefault
@@ -155,6 +160,7 @@ panda_arm:
     - TrajOptDefault
 panda_arm_hand:
   planner_configs:
+    - AnytimePathShortening
     - SBLkConfigDefault
     - ESTkConfigDefault
     - LBKPIECEkConfigDefault
@@ -181,6 +187,7 @@ panda_arm_hand:
     - TrajOptDefault
 hand:
   planner_configs:
+    - AnytimePathShortening
     - SBLkConfigDefault
     - ESTkConfigDefault
     - LBKPIECEkConfigDefault
